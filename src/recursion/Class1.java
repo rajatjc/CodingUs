@@ -11,7 +11,8 @@ public class Class1 {
         System.out.println();
         printIncreasingDecreasing(5,9);
         System.out.println();
-       // printOddEven(5,9);
+        printOddEven(6,10);
+        System.out.println();
     }
     public static void printIncreasing(int a ,int b)
     {
@@ -40,14 +41,39 @@ public class Class1 {
 
     public static void printIncreasingDecreasing(int a ,int b)
     {
-        printIncreasing(a,b);
-        printDecreasing(a,b);
+        if(a>b)
+            return;
+        System.out.print(a);
+        printIncreasingDecreasing(a+1,b);
+        System.out.print(a);
+
     }
 
     public static void printOddEven(int a ,int b)
     {
-
-
+        if(a>b)
+            return;
+        if(a%2!=0)
+            System.out.print(a);
+        printOddEven(a+1,b);
+        if(a%2==0)
+            System.out.print(a);
 
     }
 }
+
+/*
+
+59
+5 7 9 8 6
+
+69
+7 9 8 6
+
+6 10
+7 9 10 8 6
+
+5 10
+5 7 9 10 8 6
+
+ */
