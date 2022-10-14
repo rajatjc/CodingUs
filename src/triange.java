@@ -38,17 +38,14 @@ public class triange {
                     count = 1;
                     first = i;
                 }
-
-
             }
-
         }
         if(max<=count)
             max = count;
         System.out.println(max);
     }
 }
-/*
+/**
 10
 0,1,2,3,2,1,0,4,7,6
 

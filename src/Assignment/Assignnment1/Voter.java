@@ -6,7 +6,7 @@ package Assignment.Assignnment1;
 // Written by: Rajat Sharma(ID- 40196467)
 //
 
-//        in this following program i have tracked the voter information in a software application that helps the staff
+//        in this following program I have tracked the voter information in a software application that helps the staff
 //        (users) in keeping track of the Voters in every neighborhood.
 
 //the voter class has a number of getter setter methods to set and get value of the variables of the class
@@ -47,13 +47,13 @@ public class Voter {
     }
 
 
-/**
-    parameterized constructor called with parameters of the Voter class object
-    @param voterEmail email of voter
-    @param voterName Name of voter
-    @param voterAge age of voter
-    @param voterPCode Postal code of voter
-*/
+    /**
+     *         parameterized constructor called with parameters of the Voter class object
+     *         @param voterEmail email of voter
+     *         @param voterName Name of voter
+     *         @param voterAge age of voter
+     *         @param voterPCode Postal code of voter
+    */
     public Voter(long voterID, String voterName,byte voterAge, String voterEmail, char[] voterPCode){
         numberOfVoters++;
         this.voterID=voterID;
@@ -62,45 +62,76 @@ public class Voter {
         setVoterPCode(voterPCode);
         setVoterAge(voterAge);
     }
-
+    /**
+     * return the voter ID of the voter
+    */
     public long getVoterID() {
         return voterID;
     }
-
+    /**
+     * return the voter name of the voter
+    */
     public String getVoterName() {
         return voterName;
     }
 
+    /**
+     * set the voter name of the voter
+    */
     public void setVoterName(String voterName) {
         this.voterName = voterName;
     }
 
+    /**
+     * return the voter age of the voter
+    */
     public byte getVoterAge() {
         return voterAge;
     }
 
+    /**
+     * set the voter age of the voter
+    */
     public void setVoterAge(byte voterAge) {
         this.voterAge = voterAge;
     }
 
+    /**
+     * return the voter email of the voter
+    */
     public String getVoterEmail() {
         return voterEmail;
     }
+
+     /**
+      * set the voter email of the voter
+    */
 
     public void setVoterEmail(String voterEmail) {
         this.voterEmail = voterEmail;
     }
 
 
+     /**
+      * return the voter PCode of the voter
+    */
 
     public char[] getVoterPCode() {
         return voterPCode;
     }
 
+    /**
+     * set the voter PCode of the voter
+    */
+
     public void setVoterPCode(char[] voterPCode) {
         this.voterPCode = voterPCode;
     }
 
+
+    /**
+     * return a Voter object as string
+     * */
     @Override
     public String toString() {
         return
@@ -110,7 +141,9 @@ public class Voter {
                 "Email: "+getVoterEmail()+"\n" +
                 "PCode: "+String.copyValueOf(getVoterPCode())+"\n";
     }
-
+    /**
+     * return a voter object with Voter and index as a parameter
+     * */
     public static String displayVoter(Voter v, int index)
     {
         String temp="\nVoter: # "+index+"\n" +
@@ -121,10 +154,17 @@ public class Voter {
                 "PCode: "+String.copyValueOf(v.getVoterPCode())+"\n";
         return temp;
     }
-    
+
+    /**
+     * return the current number of users
+     * */
     public static int findNumberOfCreatedVoters(){return numberOfVoters;}
 
 
+
+    /**
+     * equates two voter objects depending on ID and PCode
+     * */
 
     public boolean equals(Voter temp)
     {
@@ -158,7 +198,7 @@ public class Voter {
                 }
             }
 
-            // potential
+            //potential
             //of keeping track of all the created Voter objects
             Voter[] voterBase=new Voter[voterSize];
             int passAttemps=0;
@@ -204,9 +244,7 @@ public class Voter {
                                                // System.out.println(voterBase[index].toString());
                                             }
                                             break OUTER;
-
                                         }
-
                                     } else {
                                         passAttemps++;
                                         if (passAttemps == 12) {
@@ -244,8 +282,7 @@ public class Voter {
                                             found=i;
                                         }
                                     }
-                                    if(flag==1)
-                                    {
+                                    if(flag==1) {
                                         while(true)
                                         {
                                             System.out.println(displayVoter(voterBase[found],found));
