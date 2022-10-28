@@ -53,7 +53,7 @@
 //
 //        import java.util.Scanner;
 //
-//        public class POD41 {
+//        public class pod.POD41 {
 //            public static void main(String[] args) {
 //                Scanner sc=new Scanner(System.in);
 //                String s1=sc.nextLine();
@@ -101,7 +101,7 @@
 //
 //        import java.util.Scanner;
 //
-//        public class pod42 {
+//        public class pod.pod42 {
 //            public static void main(String[] args) {
 //                Scanner sc=new Scanner(System.in);
 //                int n=Integer.parseInt(sc.nextLine());
@@ -133,7 +133,7 @@
 //        import java.util.Scanner;
 //import java.util.Stack;
 //
-//        public class pod43 {
+//        public class pod.pod43 {
 //            public static void main(String[] args) {
 //                Scanner sc=new Scanner(System.in);
 //                String s=sc.nextLine();
